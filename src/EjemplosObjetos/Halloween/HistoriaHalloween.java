@@ -7,7 +7,7 @@ package EjemplosObjetos.Halloween;
 
 /**
  *
- * @author developer
+ * @author Joel
  */
 
 import java.util.Scanner;

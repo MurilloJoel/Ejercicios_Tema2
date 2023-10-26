@@ -7,7 +7,7 @@ package EjemplosObjetos.Halloween;
 
 /**
  *
- * @author developer
+ * @author Joel
  */
 public class Trato {
     //atributos
