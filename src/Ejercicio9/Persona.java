@@ -27,5 +27,9 @@ public class Persona {
         System.out.println("¡Toma Zapato!");
         g.recibeZapato();
         this.vigilia=false;
+        
+        
+        
+        
     }
 }
