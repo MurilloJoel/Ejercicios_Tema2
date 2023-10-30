@@ -11,17 +11,17 @@ package Ejercicio9;
  */
 public class Gato {
     
-    //atributos
+    //atributos 
     private boolean vigilia;
     private String nombre;
     
-    //constructor
+    //constructor 
     public Gato (String nombre){
         this.vigilia=true;
         this.nombre=nombre;
     }
     
-    //metodos
+    //metodos 
     
     public void maulla(Persona p){
         System.out.println("¡MIAU!");
@@ -31,5 +31,6 @@ public class Gato {
     public void recibeZapato(){
         System.out.println("¡Clonk!");
         this.vigilia=false;
+        
     }
 }

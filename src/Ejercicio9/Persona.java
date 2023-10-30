@@ -11,7 +11,7 @@ package Ejercicio9;
  */
 public class Persona {
     
-    //atributos
+    //atributos  
     boolean vigilia;
     String nombre;
     
@@ -27,7 +27,6 @@ public class Persona {
         System.out.println("¡Toma Zapato!");
         g.recibeZapato();
         this.vigilia=false;
-        
         
         
         
