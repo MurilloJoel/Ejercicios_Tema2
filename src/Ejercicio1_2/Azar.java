@@ -20,25 +20,13 @@ public class Azar {
     
     //metodos
     public boolean mayor(int numero){
-        boolean mayor=false;
-        if(numero>this.valor){
-            mayor=true;
-        }
-        return mayor;
+        return this.valor>numero;
     }
-    public boolean menor(int numero){
-        boolean menor=false;
-        if(numero<this.valor){
-            menor=true;
-        }
-        return menor;
+    public boolean menor(int numero){    
+        return this.valor<numero;
     }
     
     public boolean igual(int numero){
-        boolean igual=false;
-        if(numero==this.valor){
-            igual=true;
-        }
-        return igual;
+        return this.valor==numero;
     }
 }
