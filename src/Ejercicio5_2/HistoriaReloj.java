@@ -30,7 +30,7 @@ package Ejercicio5_2;
 
 /**
  *
- * @author developer
+ * @author joel
  */
 public class HistoriaReloj {
 
