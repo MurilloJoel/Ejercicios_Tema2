@@ -40,21 +40,21 @@ public class Reloj {
     private int segundos;
 
     //Constructores
-    public Reloj() {
-        this.horas=0;
-        this.minutos=0;
-        this.segundos=0;
-    }
+    public Reloj() {                    //
+        this.horas=0;                   //
+        this.minutos=0;                 // CONSTRUCTOR DEL RELOJ A 0
+        this.segundos=0;                //
+    }                                   //
 
-    public Reloj(int horas, int minutos, int segundos) {
-        this.horas = horas;
-        this.minutos = minutos;
-        this.segundos = segundos;
-    }
+    public Reloj(int horas, int minutos, int segundos) {    //
+        this.horas = horas;                                 //
+        this.minutos = minutos;                             // CONSTRUCTOR DEL RELOJ
+        this.segundos = segundos;                           //
+    }                                                       //
 
-    public Reloj(int segundos) {
-        this.segundos = segundos;
-    }
+    public Reloj(int segundos) {                            //
+        ponerEnHora(segundos);                              //CONSTRUCTOR DEL METODO ponerEnHora()
+    }                                                       //
     
     //Getters
     public int getHoras() {
@@ -92,26 +92,30 @@ public class Reloj {
     
     //otros metodos
     public void ponerEnHora(int segundos){
-        
+        this.horas = segundos / 3600;
+        segundos %= 3600;
+        this.minutos = segundos / 60;
+        this.segundos = segundos % 60;
     }
     
     public void tick(){
-        if(segundos<60){
-            segundos++;
-        }else{
-            segundos=segundos-60;
-            if(minutos<60){
-                minutos++;
-            }else{
-                minutos= minutos-60;
-                
-                if(horas<24){
-                    horas++;
-                }else{
-                    horas=horas-24;
+        segundos++;
+        if (segundos >= 60) {
+            segundos = 0;
+            minutos++;
+            if (minutos >= 60) {
+                minutos = 0;
+                horas++;
+                if (horas >= 24) {
+                    horas = 0;
                 }
             }
         }
+    }
+    
+    @Override
+    public String toString() {
+        return horas+ " : " + minutos + " : " + segundos;
     }
     
 }
