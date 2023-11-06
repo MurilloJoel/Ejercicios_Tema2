@@ -46,7 +46,7 @@ package Ejercicio2_2;
  *
  * @author joel
  */
-import java.util.Scanner;
+import java.time.*;
 public class HistoriasTFC {
 
     /**
@@ -54,7 +54,17 @@ public class HistoriasTFC {
      */
     
     public static void main(String[] args) {
-       Scanner teclado= new Scanner(System.in);
+       
+       TFC t1 = new TFC("Joel","Murillo", "Masa", "Programacion",LocalDate.of(2023,11,06) , "programacion java TFC");
+      
+        System.out.println(t1.autorEnLetrasCapitales());
+        System.out.println(t1.inicialesAutor());
+        
+        System.out.println(t1.numeroPalabras());
+        System.out.println(t1.ocurrenciasDeLetra('a'));
+       
+       ;
+       ;
        
     }
     

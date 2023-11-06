@@ -76,9 +76,9 @@ public class TFC {
     //otros metodos
     public String inicialesAutor(){
         
-        nombre= nombre.substring(0, 0).toUpperCase();
-        apellido1= apellido1.substring(0, 0).toUpperCase();
-        apellido2= apellido2.substring(0, 0).toUpperCase();
+        nombre= nombre.substring(0, 1).toUpperCase();
+        apellido1= apellido1.substring(0, 1).toUpperCase();
+        apellido2= apellido2.substring(0, 1).toUpperCase();
         
         return nombre + apellido1 + apellido2;
         
@@ -86,9 +86,9 @@ public class TFC {
     
     public String autorEnLetrasCapitales(){
         
-        nombre= nombre.substring(0, 0).toUpperCase()+nombre.substring(1);
-        apellido1= apellido1.substring(0, 0).toUpperCase()+apellido1.substring(1);
-        apellido2= apellido2.substring(0, 0).toUpperCase()+apellido2.substring(1);
+        nombre= nombre.substring(0, 1).toUpperCase()+nombre.substring(2);
+        apellido1= apellido1.substring(0, 1).toUpperCase()+apellido1.substring(2);
+        apellido2= apellido2.substring(0, 1).toUpperCase()+apellido2.substring(2);
         
         return nombre +" "+ apellido1+" " + apellido2;
         
@@ -166,4 +166,3 @@ public class TFC {
 }
 
 
-// Juanito  J   uanito
