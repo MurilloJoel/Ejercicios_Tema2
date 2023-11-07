@@ -46,12 +46,14 @@ public class Reloj {
         this.segundos=0;                //
     }                                   //
 
+    
     public Reloj(int horas, int minutos, int segundos) {    //
         this.horas = horas;                                 //
         this.minutos = minutos;                             // CONSTRUCTOR DEL RELOJ
         this.segundos = segundos;                           //
     }                                                       //
 
+                 
     public Reloj(int segundos) {                            //
         ponerEnHora(segundos);                              //CONSTRUCTOR DEL METODO ponerEnHora()
     }                                                       //
@@ -92,7 +94,7 @@ public class Reloj {
     
     //otros metodos
     public void ponerEnHora(int segundos){
-        this.horas = segundos / 3600;
+        this.horas = (segundos / 3600) % 24;
         segundos %= 3600;
         this.minutos = segundos / 60;
         this.segundos = segundos % 60;
@@ -115,7 +117,20 @@ public class Reloj {
     
     @Override
     public String toString() {
-        return horas+ " : " + minutos + " : " + segundos;
+        //return horas+ " : " + minutos + " : " + segundos;
+        
+        String h= Integer.toString(horas);
+        String m= Integer.toString(minutos);
+        String s= Integer.toString(segundos);
+        
+        if(horas<10)
+            h= "0" + horas;
+        if(minutos<10)
+            m= "0" + minutos;
+        if(segundos<10)
+            s= "0" + segundos;
+        
+        return h+ " : " + m + " : " + s;
     }
     
 }
